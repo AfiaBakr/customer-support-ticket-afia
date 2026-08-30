@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ *
+ * Theme tokens. :root = light. .dark = dark overrides.
+ * ------------------------------------------------------------------ */
+:root {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --surface-2: #f0efea;
+  --border: #e6e3da;
+  --text: #17171a;
+  --text-muted: #6b6b73;
+
+  --gold: #a9791f;
+  --gold-soft: #c99a3a;
+  --gold-strong: #8a610f;
+  --gold-ring: rgba(169, 121, 31, 0.35);
+  --gold-glow: rgba(201, 154, 58, 0.45);
+
+  --success: #1f7a4d;
+  --warning: #b26a00;
+  --danger: #c0392b;
+
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #050505;
+  --surface: #101011;
+  --surface-2: #1a1a1c;
+  --border: #26262a;
+  --text: #ffffff;
+  --text-muted: #a1a1aa;
+
+  --gold: #d4af37;
+  --gold-soft: #f5d76e;
+  --gold-strong: #b8912e;
+  --gold-ring: rgba(212, 175, 55, 0.4);
+  --gold-glow: rgba(245, 215, 110, 0.35);
+
+  --success: #34d399;
+  --warning: #fbbf24;
+  --danger: #f87171;
+
+  color-scheme: dark;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Thin, theme-aware scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(120deg, var(--gold) 0%, var(--gold-soft) 45%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-grid {
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 75%);
+    mask-image: radial-gradient(ellipse at center, black 0%, transparent 75%);
+  }
+  .skeleton {
+    position: relative;
+    overflow: hidden;
+    background: var(--surface-2);
+  }
+  .skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    animation: shimmer 1.6s infinite;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
