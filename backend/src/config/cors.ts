@@ -1,5 +1,5 @@
 import type { CorsOptions } from 'cors';
-import { clientOrigins, isDev } from './env';
+import { clientOrigins, isDev } from './env.js';
 
 /**
  * CORS policy.
