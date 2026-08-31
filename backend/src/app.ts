@@ -1,7 +1,7 @@
 import cors from 'cors';
 import express, { type Express } from 'express';
 import morgan from 'morgan';
-import { corsOptions } from './config/cors';
+import { corsOptions } from './config/cors.js';
 import { isDev } from './config/env';
 import { errorHandler, notFound } from './middleware/error';
 import api from './routes';
