@@ -232,7 +232,7 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="border-t border-line py-6 text-center text-xs text-muted">
-          © {new Date().getFullYear()} SupportFlow. Built for the AI Factory 2.0 hackathon.
+          © {new Date().getFullYear()} SupportFlow. Built for the Fem-hack By AFIA BAKR.
         </div>
       </footer>
     </div>
