@@ -1,12 +1,12 @@
 import mongoose from 'mongoose';
-import { connectDB } from './config/db';
-import type { Category, Priority, Status } from './constants';
-import { Counter } from './models/Counter';
-import { Message } from './models/Message';
-import { Ticket } from './models/Ticket';
-import { hashPassword, User } from './models/User';
-import { triageTicket } from './services/ai.service';
-import { nextTicketNumber } from './services/ticketNumber.service';
+import { connectDB } from './config/db.js';
+import type { Category, Priority, Status } from './constants.js';
+import { Counter } from './models/Counter.js';
+import { Message } from './models/Message.js';
+import { Ticket } from './models/Ticket.js';
+import { hashPassword, User } from './models/User.js';
+import { triageTicket } from './services/ai.service.js';
+import { nextTicketNumber } from './services/ticketNumber.service.js';
 
 const DEMO_PASSWORD = 'Passw0rd!';
 

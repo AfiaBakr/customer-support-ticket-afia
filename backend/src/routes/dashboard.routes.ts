@@ -3,8 +3,8 @@ import {
   adminDashboard,
   agentDashboard,
   customerDashboard,
-} from '../controllers/dashboard.controller';
-import { requireAuth, requireRole } from '../middleware/auth';
+} from '../controllers/dashboard.controller.js';
+import { requireAuth, requireRole } from '../middleware/auth.js';
 
 const router = Router();
 

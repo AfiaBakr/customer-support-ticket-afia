@@ -1,12 +1,12 @@
 import { Types } from 'mongoose';
-import { Ticket } from '../models/Ticket';
+import { Ticket } from '../models/Ticket.js';
 import {
   createMessage,
   listMessagesForTicket,
-} from '../services/message.service';
-import { assertCanView } from '../services/ticketAccess';
-import { ApiError } from '../utils/ApiError';
-import { asyncHandler } from '../utils/asyncHandler';
+} from '../services/message.service.js';
+import { assertCanView } from '../services/ticketAccess.js';
+import { ApiError } from '../utils/ApiError.js';
+import { asyncHandler } from '../utils/asyncHandler.js';
 
 export const listMessages = asyncHandler(async (req, res) => {
   const actor = req.user!;

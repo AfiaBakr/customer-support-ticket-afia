@@ -1,4 +1,4 @@
-import { Counter } from '../models/Counter';
+import { Counter } from '../models/Counter.js';
 
 /**
  * Returns the next unique, human-readable ticket number, e.g. `SF-2026-000042`.

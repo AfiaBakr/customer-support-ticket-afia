@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { CATEGORIES, PRIORITIES } from '../constants';
+import { CATEGORIES, PRIORITIES } from '../constants.js';
 
 /**
  * Contract every AI triage result must satisfy before it is stored.

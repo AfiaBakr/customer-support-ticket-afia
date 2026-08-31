@@ -1,7 +1,7 @@
 import { Types } from 'mongoose';
-import { Ticket } from '../models/Ticket';
-import { User } from '../models/User';
-import { asyncHandler } from '../utils/asyncHandler';
+import { Ticket } from '../models/Ticket.js';
+import { User } from '../models/User.js';
+import { asyncHandler } from '../utils/asyncHandler.js';
 
 type StatusRow = { _id: string; count: number };
 

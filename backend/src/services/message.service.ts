@@ -1,12 +1,12 @@
 import { Types } from 'mongoose';
-import type { Role } from '../constants';
-import { Message } from '../models/Message';
-import { Ticket } from '../models/Ticket';
-import type { PopulatedMessageLean } from '../types/lean';
-import { ApiError } from '../utils/ApiError';
-import { type SerializedMessage, serializeMessage } from '../utils/serializers';
-import { canMessageTicket } from './ticketAccess';
-import { emitNewMessage } from '../sockets';
+import type { Role } from '../constants.js';
+import { Message } from '../models/Message.js';
+import { Ticket } from '../models/Ticket.js';
+import type { PopulatedMessageLean } from '../types/lean.js';
+import { ApiError } from '../utils/ApiError.js';
+import { type SerializedMessage, serializeMessage } from '../utils/serializers.js';
+import { canMessageTicket } from './ticketAccess.js';
+import { emitNewMessage } from '../sockets/index.js';
 
 interface Actor {
   id: string;

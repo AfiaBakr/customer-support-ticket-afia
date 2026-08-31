@@ -2,7 +2,7 @@ import {
   isUserRef,
   type PopulatedMessageLean,
   type PopulatedTicketLean,
-} from '../types/lean';
+} from '../types/lean.js';
 
 export interface SerializedUserRef {
   id: string;

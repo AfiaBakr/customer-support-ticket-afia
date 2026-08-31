@@ -1,6 +1,6 @@
 import type { RequestHandler } from 'express';
 import type { ZodTypeAny } from 'zod';
-import { ApiError } from '../utils/ApiError';
+import { ApiError } from '../utils/ApiError.js';
 
 type Source = 'body' | 'query' | 'params';
 

@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { CATEGORIES, PRIORITIES, STATUSES } from '../constants';
+import { CATEGORIES, PRIORITIES, STATUSES } from '../constants.js';
 
 export const createTicketSchema = z.object({
   subject: z.string().trim().min(5, 'Subject must be at least 5 characters').max(160),

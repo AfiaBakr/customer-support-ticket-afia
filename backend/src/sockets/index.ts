@@ -1,11 +1,11 @@
 import type { Server as HttpServer } from 'node:http';
 import { Server, type Socket } from 'socket.io';
-import { socketCorsOrigin } from '../config/cors';
-import type { Role } from '../constants';
-import { Ticket } from '../models/Ticket';
-import { User } from '../models/User';
-import { verifyToken } from '../services/token.service';
-import { assertCanView } from '../services/ticketAccess';
+import { socketCorsOrigin } from '../config/cors.js';
+import type { Role } from '../constants.js';
+import { Ticket } from '../models/Ticket.js';
+import { User } from '../models/User.js';
+import { verifyToken } from '../services/token.service.js';
+import { assertCanView } from '../services/ticketAccess.js';
 
 interface SocketUser {
   id: string;
@@ -91,7 +91,7 @@ export function initSockets(httpServer: HttpServer): Server {
         ack?: (res: unknown) => void,
       ) => {
         try {
-          const { createMessage } = await import('../services/message.service');
+          const { createMessage } = await import('../services/message.service.js');
           const message = await createMessage({
             ticketId: payload.ticketId,
             text: payload.message,

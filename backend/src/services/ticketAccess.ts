@@ -1,6 +1,6 @@
 import type { Types } from 'mongoose';
-import type { Role } from '../constants';
-import { ApiError } from '../utils/ApiError';
+import type { Role } from '../constants.js';
+import { ApiError } from '../utils/ApiError.js';
 
 interface Actor {
   id: string;

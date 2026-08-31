@@ -1,8 +1,8 @@
 import { createServer } from 'node:http';
-import { createApp } from './app';
-import { connectDB } from './config/db';
-import { env } from './config/env';
-import { initSockets } from './sockets';
+import { createApp } from './app.js';
+import { connectDB } from './config/db.js';
+import { env } from './config/env.js';
+import { initSockets } from './sockets/index.js';
 
 async function main(): Promise<void> {
   await connectDB();

@@ -1,5 +1,5 @@
 import type { Types } from 'mongoose';
-import type { Category, Priority, Role, Status } from '../constants';
+import type { Category, Priority, Role, Status } from '../constants.js';
 
 /** A ref field that may be an ObjectId or a populated user document. */
 export interface UserRef {

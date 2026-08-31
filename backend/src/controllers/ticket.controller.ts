@@ -4,32 +4,32 @@ import {
   type Priority,
   type Status,
   STATUS_TRANSITIONS,
-} from '../constants';
-import { Ticket, type TicketDocument } from '../models/Ticket';
-import { User } from '../models/User';
-import { AiUnavailableError, triageTicket } from '../services/ai.service';
-import { createMessage } from '../services/message.service';
-import { nextTicketNumber } from '../services/ticketNumber.service';
+} from '../constants.js';
+import { Ticket, type TicketDocument } from '../models/Ticket.js';
+import { User } from '../models/User.js';
+import { AiUnavailableError, triageTicket } from '../services/ai.service.js';
+import { createMessage } from '../services/message.service.js';
+import { nextTicketNumber } from '../services/ticketNumber.service.js';
 import {
   assertCanModify,
   assertCanView,
   canModifyTicket,
-} from '../services/ticketAccess';
+} from '../services/ticketAccess.js';
 import {
   emitStatusUpdated,
   emitTicketCreated,
   emitTicketUpdated,
-} from '../sockets';
-import type { PopulatedTicketLean } from '../types/lean';
-import { ApiError } from '../utils/ApiError';
-import { asyncHandler } from '../utils/asyncHandler';
-import { escapeRegex } from '../utils/regex';
-import { serializeTicket } from '../utils/serializers';
+} from '../sockets/index.js';
+import type { PopulatedTicketLean } from '../types/lean.js';
+import { ApiError } from '../utils/ApiError.js';
+import { asyncHandler } from '../utils/asyncHandler.js';
+import { escapeRegex } from '../utils/regex.js';
+import { serializeTicket } from '../utils/serializers.js';
 import type {
   CreateTicketInput,
   ListQuery,
   UpdateTicketInput,
-} from '../validators/ticket.schema';
+} from '../validators/ticket.schema.js';
 
 const POPULATE = [
   { path: 'customerId', select: 'name email' },

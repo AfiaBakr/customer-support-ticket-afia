@@ -1,12 +1,12 @@
 import { Router } from 'express';
-import { dbReady } from '../config/db';
-import { requireAuth, requireRole } from '../middleware/auth';
-import { User } from '../models/User';
-import { ApiError } from '../utils/ApiError';
-import { asyncHandler } from '../utils/asyncHandler';
-import authRoutes from './auth.routes';
-import dashboardRoutes from './dashboard.routes';
-import ticketRoutes from './ticket.routes';
+import { dbReady } from '../config/db.js';
+import { requireAuth, requireRole } from '../middleware/auth.js';
+import { User } from '../models/User.js';
+import { ApiError } from '../utils/ApiError.js';
+import { asyncHandler } from '../utils/asyncHandler.js';
+import authRoutes from './auth.routes.js';
+import dashboardRoutes from './dashboard.routes.js';
+import ticketRoutes from './ticket.routes.js';
 
 const api = Router();
 

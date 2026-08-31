@@ -2,10 +2,10 @@ import { Router } from 'express';
 import {
   listMessages,
   postMessage,
-} from '../controllers/message.controller';
-import * as tickets from '../controllers/ticket.controller';
-import { requireAuth, requireRole } from '../middleware/auth';
-import { validate } from '../middleware/validate';
+} from '../controllers/message.controller.js';
+import * as tickets from '../controllers/ticket.controller.js';
+import { requireAuth, requireRole } from '../middleware/auth.js';
+import { validate } from '../middleware/validate.js';
 import {
   assignSchema,
   createTicketSchema,
@@ -13,7 +13,7 @@ import {
   messageSchema,
   resolveSchema,
   updateTicketSchema,
-} from '../validators/ticket.schema';
+} from '../validators/ticket.schema.js';
 
 const router = Router();
 

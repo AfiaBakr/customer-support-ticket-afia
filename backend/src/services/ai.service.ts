@@ -1,6 +1,6 @@
-import { env } from '../config/env';
-import { type Category, CATEGORIES, type Priority } from '../constants';
-import { type AiTriageResult, aiTriageResultSchema } from '../validators/ai.schema';
+import { env } from '../config/env.js';
+import { type Category, CATEGORIES, type Priority } from '../constants.js';
+import { type AiTriageResult, aiTriageResultSchema } from '../validators/ai.schema.js';
 
 export interface TriageInput {
   subject: string;

@@ -6,7 +6,7 @@ import {
   PRIORITIES,
   type Status,
   STATUSES,
-} from '../constants';
+} from '../constants.js';
 
 export interface ITicket {
   ticketNumber: string;

@@ -1,5 +1,5 @@
 import { type HydratedDocument, model, Schema, type Types } from 'mongoose';
-import { type Role, ROLES } from '../constants';
+import { type Role, ROLES } from '../constants.js';
 
 export interface IMessage {
   ticketId: Types.ObjectId;

@@ -2,9 +2,9 @@ import cors from 'cors';
 import express, { type Express } from 'express';
 import morgan from 'morgan';
 import { corsOptions } from './config/cors.js';
-import { isDev } from './config/env';
-import { errorHandler, notFound } from './middleware/error';
-import api from './routes';
+import { isDev } from './config/env.js';
+import { errorHandler, notFound } from './middleware/error.js';
+import api from './routes/index.js';
 
 export function createApp(): Express {
   const app = express();

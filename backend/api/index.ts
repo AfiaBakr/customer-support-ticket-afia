@@ -1,6 +1,6 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import { createApp } from '../src/app.js';
-import { connectDB } from '../src/config/db';
+import { connectDB } from '../src/config/db.js';
 
 /**
  * Vercel serverless entry point.

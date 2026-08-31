@@ -1,8 +1,8 @@
-import { asyncHandler } from '../utils/asyncHandler';
-import { ApiError } from '../utils/ApiError';
-import { hashPassword, User } from '../models/User';
-import { signToken } from '../services/token.service';
-import type { LoginInput, RegisterInput } from '../validators/auth.schema';
+import { asyncHandler } from '../utils/asyncHandler.js';
+import { ApiError } from '../utils/ApiError.js';
+import { hashPassword, User } from '../models/User.js';
+import { signToken } from '../services/token.service.js';
+import type { LoginInput, RegisterInput } from '../validators/auth.schema.js';
 
 interface PublicUserSource {
   _id: unknown;

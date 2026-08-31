@@ -1,4 +1,4 @@
-import type { Role } from '../constants';
+import type { Role } from '../constants.js';
 
 declare global {
   namespace Express {

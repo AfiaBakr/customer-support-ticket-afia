@@ -1,6 +1,6 @@
 import type { ErrorRequestHandler, RequestHandler } from 'express';
-import { isDev } from '../config/env';
-import { ApiError } from '../utils/ApiError';
+import { isDev } from '../config/env.js';
+import { ApiError } from '../utils/ApiError.js';
 
 export const notFound: RequestHandler = (req, _res, next) => {
   next(ApiError.notFound(`Route not found: ${req.method} ${req.originalUrl}`));

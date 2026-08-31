@@ -1,8 +1,8 @@
 import type { RequestHandler } from 'express';
-import type { Role } from '../constants';
-import { User } from '../models/User';
-import { verifyToken } from '../services/token.service';
-import { ApiError } from '../utils/ApiError';
+import type { Role } from '../constants.js';
+import { User } from '../models/User.js';
+import { verifyToken } from '../services/token.service.js';
+import { ApiError } from '../utils/ApiError.js';
 
 export const requireAuth: RequestHandler = async (req, _res, next) => {
   try {
